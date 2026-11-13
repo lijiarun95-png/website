@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jiarun (Gary) Li</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Jiarun (Gary) Li, Ph.D. candidate in economics at Lehigh University. Health economics, industrial organization, applied microeconomics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Noto+Serif+SC:wght@500&display=swap">
+<style>
+/* Layout: top bar with name and three section tabs; below it a profile column beside one content pane per tab. Lehigh brown accent. */
+:root {
+  --paper: #ffffff;
+  --ink: #222222;
+  --muted: #6b6b6b;
+  --rule: #e6e6e6;
+  --link: #83541e;
+  --accent: #502d0e;
+  --card: #f6f4f2;
+  --font: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-cjk: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font); font-size: 1.0625rem; line-height: 1.65; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 0.18em; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+
+.inner {
+  max-width: 1000px; margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+
+/* Top bar */
+.topbar { border-bottom: 1px solid var(--rule); }
+.topbar .inner { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 36px; padding-block: 18px; }
+.site-name { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; color: var(--accent); }
+.site-name:hover { text-decoration: none; }
+.tabs { display: flex; gap: 24px; }
+.tabs a { color: var(--muted); font-size: 0.98rem; padding-block: 4px; }
+.tabs a:hover { color: var(--ink); text-decoration: none; }
+.tabs a[aria-current="page"] { color: var(--link); font-weight: 600; }
+
+/* Body grid */
+.layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; align-items: start; padding-block: 44px 72px; }
+
+.profile { display: grid; gap: 4px; font-size: 0.95rem; color: var(--muted); }
+.portrait {
+  width: 180px; height: auto; aspect-ratio: 396 / 388; max-width: 100%; border-radius: 10px; object-fit: cover;
+  display: block; margin-bottom: 18px;
+}
+.profile h1 { margin: 0 0 6px; font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; color: var(--ink); line-height: 1.35; }
+.profile h1 .cjk { font-family: var(--font-cjk); font-weight: 500; }
+.profile p { margin: 0; line-height: 1.5; }
+.profile .links { display: grid; gap: 2px; margin-top: 12px; }
+
+/* Content */
+main { min-width: 0; }
+.view h2 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; color: var(--accent); margin: 0 0 18px; line-height: 1.25; }
+.view h2:not(:first-child) { margin-top: 44px; }
+.view > p { margin: 0 0 14px; max-width: 66ch; }
+
+.papers { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; max-width: 70ch; }
+.papers .title { font-weight: 600; }
+.papers .meta { display: block; color: var(--muted); font-size: 0.97rem; }
+.papers details { margin-top: 4px; }
+.papers summary { cursor: pointer; width: fit-content; color: var(--link); font-size: 0.95rem; }
+.papers summary:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+.papers details p { margin: 8px 0 0; font-size: 0.99rem; }
+
+.rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; max-width: 70ch; }
+.rows li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 24px; }
+.rows .when { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Evaluations: one summary row per term; click a row to see the six items */
+.ev-list { max-width: 70ch; font-size: 0.97rem; }
+.ev-list { --ev-cols: minmax(0, 1fr) 7rem 3.6rem 6.4rem; --ev-gap: 12px; }
+.ev-head, .ev-sum { display: grid; grid-template-columns: var(--ev-cols); gap: var(--ev-gap); align-items: baseline; }
+.ev-head { color: var(--muted); font-size: 0.85rem; font-weight: 600; padding: 0 0 6px; border-bottom: 1px solid var(--rule); }
+.ev .role { color: var(--muted); margin-left: 6px; }
+.ev { border-bottom: 1px solid var(--rule); }
+.ev-sum { padding: 9px 0; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.ev .mine { font-weight: 600; }
+.ev .dept, .ev-head .dept { color: var(--muted); }
+.ev-head .short { display: none; }
+.nw { white-space: nowrap; }
+.note { margin: 0 0 12px; color: var(--muted); font-size: 0.92rem; max-width: 70ch; }
+@media (max-width: 520px) {
+  .ev-list { --ev-cols: minmax(0, 1fr) 6.2rem 3.2rem 3.6rem; --ev-gap: 8px; }
+  .ev .role { display: block; margin-left: 0; font-size: 0.88em; }
+  .ev-head .long { display: none; }
+  .ev-head .short { display: inline; }
+}
+
+.quote-group { font-size: 1rem; font-weight: 600; color: var(--muted); margin: 0 0 12px; }
+.quotes + .quote-group { margin-top: 28px; }
+.quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; max-width: 70ch; }
+.quote { margin: 0; padding: 14px 16px; background: var(--card); border-radius: 6px; }
+.quote blockquote { margin: 0; font-size: 0.97rem; line-height: 1.55; color: var(--muted); }
+.quote strong { color: var(--ink); font-weight: 600; }
+.quote figcaption { margin-top: 6px; color: var(--muted); font-size: 0.85rem; }
+@media (max-width: 620px) { .quotes { grid-template-columns: minmax(0, 1fr); } }
+
+footer { color: var(--muted); font-size: 0.85rem; padding-block: 0 40px; }
+
+@media (max-width: 760px) {
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-block: 28px 56px; }
+  .profile { grid-template-columns: 112px minmax(0, 1fr); column-gap: 18px; align-items: center; }
+  .portrait { width: 112px; margin: 0; grid-row: span 6; }
+  .tabs { gap: 18px; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="inner">
+    <a class="site-name" href="#about">Jiarun (Gary) Li</a>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#about" data-view="about">Home</a>
+      <a href="#research" data-view="research">Research</a>
+      <a href="#teaching" data-view="teaching">Teaching</a>
+    </nav>
+  </div>
+</header>
+
+<div class="inner layout">
+  <aside class="profile">
+    <img class="portrait" src="images/photo.jpg" alt="Portrait of Jiarun (Gary) Li" width="396" height="388">
+    <h1>Jiarun (Gary) Li | <span class="cjk" lang="zh-Hans">李家润</span></h1>
+    <p>Ph.D. Candidate in Economics</p>
+    <p>Lehigh University</p>
+    <p>Email: <a href="mailto:jil622@lehigh.edu">jil622@lehigh.edu</a></p>
+    <div class="links">
+      <a href="files/Jiarun_Li_CV.pdf" target="_blank" rel="noopener">CV</a>
+      <a href="https://www.linkedin.com/in/jiarun-li" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="view" id="about" aria-labelledby="h-about">
+      <h2 id="h-about">About</h2>
+      <p>Welcome! I am a Ph.D. candidate in economics at Lehigh University. My fields are health economics, industrial organization, and applied microeconomics. My research covers pharmaceutical competition, physician prescribing, and health policy, with additional work on econometric methods and field experiments. I combine causal inference methods with large-scale linked data, drawing on administrative records and survey data from a national research cohort.</p>
+      <p>Before coming to Lehigh, I earned a Master of Social Science in Global Political Economy from The Chinese University of Hong Kong and an M.S. in Applied Economics from Johns Hopkins University. At Lehigh, I have taught Intermediate Macroeconomic Analysis as an adjunct professor. Thanks for visiting, and feel free to reach out by email.</p>
+    </section>
+
+    <section class="view" id="research" aria-labelledby="h-jmp">
+      <h2 id="h-jmp">Job Market Paper</h2>
+      <ul class="papers">
+        <li>
+          <span class="title">Competing for Displaced Patients: Pharmaceutical Detailing after Formulary Exclusions</span>
+          <details>
+            <summary>Abstract</summary>
+            <p>When a pharmacy benefit manager excludes a drug, the manufacturers of the covered alternatives can compete for the displaced prescriptions. In 2016, Express Scripts removed the diabetes drug saxagliptin from its National Preferred Formulary and named Merck's sitagliptin as one of two covered alternatives. Using Merck's food and beverage payments to physicians in Open Payments as a record of sales visits, I compare physicians who had prescribed saxagliptin with those who had prescribed only sitagliptin in a doubly robust difference-in-differences design. Merck's payments to exposed physicians rose by 7 to 10 percent of their pre-treatment level in the quarter the removal took effect, through more visits rather than larger payments. The increase is not detectable among physicians who had not prescribed sitagliptin and is concentrated among the heaviest prescribers, consistent with a visit moving more prescriptions where the firm's drug is already in use. The results suggest that part of the switching an exclusion achieves is the favored manufacturer's own doing.</p>
+          </details>
+        </li>
+      </ul>
+
+      <h2>Working Papers</h2>
+      <ul class="papers">
+        <li>
+          <span class="title">Beyond Overdose Prevention: Naloxone Coprescription Laws and the Path to Treatment</span>
+          <span class="meta">with Shin-Yi Chou and Bingjin Xue. <a href="https://www.nber.org/papers/w35997" target="_blank" rel="noopener">NBER Working Paper 35997</a>. Under review.</span>
+          <details>
+            <summary>Abstract</summary>
+            <p>Over one-third of U.S. states have enacted naloxone coprescription laws, requiring physicians to prescribe or offer naloxone alongside high-risk opioids. Using Medicare Part D data, the Treatment Episode Data Set, and a difference-in-differences design, we study how these laws affect naloxone access, broader prescription behavior, and treatment engagement. Coprescription laws increased naloxone prescribing by 275%, with effects twice as large in states requiring prescriptions as in those requiring only offers. We find no evidence of increased opioid or benzodiazepine prescribing, countering moral hazard concerns that broader naloxone access might encourage riskier opioid use. Instead, we document significant increases in prescribing of medications for opioid use disorder (MOUD) and gains in opioid use disorder treatment admissions, primarily in deliberate treatment-seeking settings. These results suggest that coprescription laws may have broader benefits beyond overdose prevention.</p>
+          </details>
+        </li>
+        <li>
+          <span class="title">Estimation and Inference in Bipartite Spatial Experiments with Interference under Cluster-Randomized Saturation</span>
+          <span class="meta">with Zhiguo Xiao, Kuan Sun, and Peikai Wu.</span>
+          <details>
+            <summary>Abstract</summary>
+            <p>We study design-based estimation and inference for causal effects in bipartite spatial experiments, where treatment is randomized on source units and outcomes are measured on distinct receiver units, generating dense distance-decaying interference. Using a two-stage cluster-randomized saturation design on sources, we target a treatment effect comparing two counterfactual Bernoulli assignment intensities. Because assigning each receiver to a single nearby treated cluster can be biased under cross-cluster interference, we propose a local uniform-environment estimator. We establish convergence rates and a CLT under a nonstandard normalization capturing both receiver averaging and dependence induced by source clustering, and we provide a conservative variance estimator based on a truncated quadratic form. We also derive rate-optimal and conservative undersmoothed choices for the number of source clusters. Finally, simulations demonstrate that the proposed procedure improves both estimation and design relative to naive bipartite estimators and unipartite spatial design heuristics.</p>
+          </details>
+        </li>
+        <li>
+          <span class="title">From Research to Prescriptions: Does Negative Scientific Evidence Shape Physician Prescribing Behavior?</span>
+          <span class="meta">with Shin-Yi Chou.</span>
+          <details>
+            <summary>Abstract</summary>
+            <p>We investigate the influence of academic publications on physician prescribing behavior, with a specific focus on antidepressants. Using Medicare Part D data, we collect comprehensive publication records from PubMed and classify research papers as either positive or negative toward the corresponding drugs. Our analysis examines the impact of these publications on prescription patterns, revealing how academic research can influence prescribing decisions. These findings provide insights into how physicians incorporate new research into their prescribing practices, with implications for the dissemination and impact of medical research.</p>
+          </details>
+        </li>
+        <li>
+          <span class="title">Altruism, Information, and Career Choice: Experimental Evidence from China</span>
+          <span class="meta">with Xiaowei Hao, Jianan Yang, and Hange Yu.</span>
+        </li>
+      </ul>
+
+      <h2>Work in Progress</h2>
+      <ul class="papers">
+        <li><span class="title">Generic Substitution Laws and Brand Strategy at Patent Expiration</span></li>
+        <li><span class="title">Does Attending Conferences Change What Economists Study? Evidence from the AEA Annual Meeting</span></li>
+      </ul>
+    </section>
+
+    <section class="view" id="teaching" aria-labelledby="h-teaching">
+      <h2 id="h-teaching">Teaching Experience</h2>
+      <ul class="rows">
+        <li><span>Adjunct Professor, Intermediate Macroeconomic Analysis (ECO 119)</span><span class="when">Fall 2025, Summer 2026</span></li>
+        <li><span>Head Teaching Assistant, Principles of Economics</span><span class="when">Spring 2025</span></li>
+        <li><span>Teaching Assistant, Principles of Economics</span><span class="when">2022&ndash;2025</span></li>
+      </ul>
+
+      <h2>Teaching Interests</h2>
+      <ul class="rows">
+        <li><span>Intermediate Microeconomics</span></li>
+        <li><span>Intermediate Macroeconomics</span></li>
+        <li><span>Econometrics</span></li>
+        <li><span>Statistics</span></li>
+        <li><span>Health Economics</span></li>
+      </ul>
+
+      <h2>Student Evaluations</h2>
+      <p class="note">Mean scores on Lehigh's six evaluation items <span class="nw">(1&ndash;5)</span> for selected semesters, with the department mean for comparison.</p>
+      <div class="ev-list">
+        <div class="ev-head" aria-hidden="true"><span>Course</span><span>Semester</span><span class="num">Score</span><span class="num dept"><span class="long">Department</span><span class="short">Dept.</span></span></div>
+        <div class="ev"><div class="ev-sum"><span class="crs">ECO 119-011 <span class="role">Adjunct Professor</span></span><span>Fall 2025</span><span class="num mine">4.48</span><span class="num dept">4.35</span></div></div>
+        <div class="ev"><div class="ev-sum"><span class="crs">ECO 001 <span class="role">Teaching Assistant</span></span><span>Fall 2024</span><span class="num mine">4.30</span><span class="num dept">4.13</span></div></div>
+        <div class="ev"><div class="ev-sum"><span class="crs">ECO 001 <span class="role">Teaching Assistant</span></span><span>Spring 2023</span><span class="num mine">4.65</span><span class="num dept">4.48</span></div></div>
+        <div class="ev"><div class="ev-sum"><span class="crs">ECO 001 <span class="role">Teaching Assistant</span></span><span>Fall 2022</span><span class="num mine">4.21</span><span class="num dept">4.18</span></div></div>
+      </div>
+
+
+      <h2>Student Comments</h2>
+      <p class="note">Selected comments from Lehigh course evaluations, lightly edited for grammar.</p>
+      <h3 class="quote-group">Adjunct Professor, Intermediate Macroeconomic Analysis</h3>
+      <div class="quotes">
+          <figure class="quote"><blockquote>&ldquo;I appreciated <strong>the effort that Prof. Li made to ensure that everyone understood the content</strong>. You could tell that he cares about his students.&rdquo;</blockquote></figure>
+          <figure class="quote"><blockquote>&ldquo;The professor is very friendly and helpful with the class. <strong>He explains every question deeply and he has lots of real-life examples.</strong>&rdquo;</blockquote></figure>
+          <figure class="quote"><blockquote>&ldquo;He was understanding of when concepts were difficult to understand and <strong>would revisit them or explain them in great detail</strong> in order to help us understand them fully.&rdquo;</blockquote></figure>
+          <figure class="quote"><blockquote>&ldquo;I loved how Prof. Li would actually take the time to explain complex subjects and <strong>focus more on the outcome of your learning rather than the outcome of exams</strong> … he really cares about how you do.&rdquo;</blockquote></figure>
+      </div>
+      <h3 class="quote-group">Teaching Assistant, Principles of Economics</h3>
+      <div class="quotes">
+          <figure class="quote"><blockquote>&ldquo;As a TA, Gary was helpful and very explanative when I had any additional questions or concerns after recitation. <strong>I would recommend him to anyone taking the course</strong> because he was friendly and knew the content well.&rdquo;</blockquote></figure>
+          <figure class="quote"><blockquote>&ldquo;Gary was the best TA I have ever had. He <strong>brought so much enthusiasm to my recitations</strong>, and I loved having him.&rdquo;</blockquote></figure>
+          <figure class="quote"><blockquote>&ldquo;Gary was a great TA. He <strong>always stayed after class to make sure we</strong> got the class notes and <strong>understood the topics of the recitation</strong>. Great guy, and very helpful with students who need extra explaining.&rdquo;</blockquote></figure>
+          <figure class="quote"><blockquote>&ldquo;Gary Li has been a wonderful TA this semester. He was <strong>always encouraging me about learning economics properly, although it is not my major</strong>.&rdquo;</blockquote></figure>
+      </div>
+
+    </section>
+  </main>
+</div>
+
+<footer><div class="inner">&copy; 2026 Jiarun Li</div></footer>
+
+<script>
+// Show one view at a time based on the URL hash; all views stay visible without JS.
+(function () {
+  var views = ["about", "research", "teaching"];
+  function show() {
+    var id = location.hash.replace("#", "");
+    if (views.indexOf(id) === -1) id = "about";
+    views.forEach(function (v) {
+      document.getElementById(v).hidden = v !== id;
+    });
+    document.querySelectorAll(".tabs a").forEach(function (a) {
+      if (a.dataset.view === id) a.setAttribute("aria-current", "page");
+      else a.removeAttribute("aria-current");
+    });
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", show);
+  show();
+})();
+</script>
+<!-- Default Statcounter code for Jiarun Li Personal Website
+https://jiarun-li.com -->
+<script type="text/javascript">
+var sc_project=13365331; 
+var sc_invisible=1; 
+var sc_security="f92a06f6"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="website statistics"
+href="https://statcounter.com/" target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/13365331/0/f92a06f6/1/" alt="website statistics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</body>
+</html>
