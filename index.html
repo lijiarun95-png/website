@@ -77,6 +77,10 @@ main { min-width: 0; }
 .rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; max-width: 70ch; }
 .rows li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 24px; }
 .rows .when { color: var(--muted); font-variant-numeric: tabular-nums; }
+/* Teaching experience: role on the first line, course underneath, dates aligned with the role */
+.rows.roles { gap: 14px; }
+.rows.roles li { align-items: baseline; }
+.rows .sub { display: block; color: var(--muted); font-size: 0.97rem; }
 
 /* Evaluations: one summary row per term; click a row to see the six items */
 .ev-list { max-width: 70ch; font-size: 0.97rem; }
@@ -207,10 +211,10 @@ footer { color: var(--muted); font-size: 0.85rem; padding-block: 0 40px; }
 
     <section class="view" id="teaching" aria-labelledby="h-teaching">
       <h2 id="h-teaching">Teaching Experience</h2>
-      <ul class="rows">
-        <li><span>Adjunct Professor, Intermediate Macroeconomic Analysis (ECO 119)</span><span class="when">Fall 2025, Summer 2026</span></li>
-        <li><span>Head Teaching Assistant, Principles of Economics</span><span class="when">Spring 2025</span></li>
-        <li><span>Teaching Assistant, Principles of Economics</span><span class="when">2022&ndash;2025</span></li>
+      <ul class="rows roles">
+        <li><span>Adjunct Professor<span class="sub">Intermediate Macroeconomic Analysis (ECO 119)</span></span><span class="when">Fall 2025, Summer 2026</span></li>
+        <li><span>Head Teaching Assistant<span class="sub">Principles of Economics (ECO 001)</span></span><span class="when">Spring 2025</span></li>
+        <li><span>Teaching Assistant<span class="sub">Principles of Economics (ECO 001)</span></span><span class="when">2022&ndash;2025</span></li>
       </ul>
 
       <h2>Teaching Interests</h2>
